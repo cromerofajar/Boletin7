@@ -20,40 +20,40 @@ public class Libro {
         nPrestados=nPres;
     }
     Scanner ler=new Scanner(System.in);
-    public void getLibros(){
+    public void introduzcaLibros(){
         String libro;
         System.out.println("Introduzca titulo do libro:");
         libro=ler.next();
         tituloLibro=libro;
     }
-    public String setLibro(){
+    public String cantidadLibro(){
         return tituloLibro;
     }
-    public void getAutor(){
+    public void introduzcaAutor(){
         String autor;
         System.out.println("Introduzca autor do libro:");
         autor=ler.nextLine();
         this.autor=autor;
     }
-    public String setAutor(){
+    public String cantidadAutor(){
         return autor;
     }
-    public void getExemplares(){
+    public void introduzcaExemplares(){
         int exempla;
         System.out.println("Introduzca numero exemplares do libro:");
         exempla=ler.nextInt();
         nExemplares=exempla;
     }
-    public int setExemplares(){
+    public int cantidadExemplares(){
         return nExemplares;
     }
-    public void getPrestados(){
+    public void introduzcaPrestados(){
         int prest;
         System.out.println("Introduzca numero prestamos do libro:");
         prest=ler.nextInt();
         nPrestados=prest;
     }
-    public int setPrestados(){
+    public int cantidadPrestados(){
         return nPrestados;
     }
     public void prestamo(){
@@ -72,7 +72,7 @@ public class Libro {
     }
     public void devolucion(){
         int dev;
-        System.out.println("Introduzca libros a prestar:");
+        System.out.println("Introduzca libros a devolver:");
         dev=ler.nextInt();
         nPrestados=nPrestados-dev;
         if(nPrestados<=0){
@@ -85,5 +85,6 @@ public class Libro {
 
         }
     }
+    @Override
     public String toString(){String datosLibro="Titulo: "+ tituloLibro+"\nAutor: "+ autor +"\nExemplares: "+nExemplares+"\nPrestamos: "+nPrestados; return datosLibro;}
 }
